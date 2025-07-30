@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juvenal Seguros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-hover:hover {
+            transform: scale(1.02);
+        }
+        .btn-hover:active {
+            transform: scale(0.98);
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <!-- Page 1 - Landing -->
+    <div id="page1" class="w-full max-w-2xl bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+        <div class="p-8 sm:p-10">
+            <h1 class="text-3xl sm:text-4xl font-extrabold uppercase text-red-600 mb-2 tracking-tight">JUVENAL SEGUROS</h1>
+            
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Sua Casa Protegida com a Juvenal Corretora! ✨</h2>
+            
+            <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                Olá! Sou seu corretor digital. 👋<br>
+                Estou aqui para te apresentar uma oportunidade INCRÍVEL de proteger seus bens mais preciosos! ️
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r">
+                <p class="text-blue-800 font-medium">
+                    Imagine ter a tranquilidade de saber que seu lar, seu carro ou sua família está protegido contra imprevistos, e o melhor:
+                </p>
+                <p class="text-green-700 font-bold mt-2">
+                    com um <span class="underline">desconto EXCLUSIVO de 30%</span> no seguro!
+                </p>
+            </div>
+            
+            <p class="text-gray-700 mb-8 text-lg">
+                Tire suas dúvidas sem compromisso com um de nossos especialistas agora mesmo.
+            </p>
+            
+            <button onclick="showPage2()" class="btn-hover w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg text-lg transition-all duration-200 shadow-md">
+                Fale com nossos corretores no WhatsApp! 
+            </button>
+            
+            <div class="mt-10 pt-6 border-t border-gray-200">
+                <p class="text-gray-600 italic">
+                    Abraço,<br>
+                    Da Juvenal Corretora.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Page 2 - Corretores -->
+    <div id="page2" class="hidden w-full max-w-2xl bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+        <div class="p-8 sm:p-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Corretores da Juvenal</h1>
+            
+            <p class="text-gray-700 text-lg mb-8">
+                Escolha um de nossos especialistas para conversar agora mesmo:
+            </p>
+            
+            <div class="space-y-6">
+                <!-- Corretor 1 -->
+                <div class="card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Eduardo</h3>
+                    <p class="text-gray-600 mb-4">Especialista em cotações de seguros.</p>
+                    <a href="https://wa.me/48932654757" target="_blank" class="btn-hover inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg text-center transition-all duration-200 shadow-sm w-full sm:w-auto">
+                        Falar com Eduardo
+                    </a>
+                </div>
+                
+                <!-- Corretor 2 -->
+                <div class="card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Jean</h3>
+                    <p class="text-gray-600 mb-4">Especialista em cotações de seguros.</p>
+                    <a href="https://wa.me/48984444362" target="_blank" class="btn-hover inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg text-center transition-all duration-200 shadow-sm w-full sm:w-auto">
+                        Falar com Jean
+                    </a>
+                </div>
+                
+                <!-- Corretor 3 -->
+                <div class="card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pedro</h3>
+                    <p class="text-gray-600 mb-4">Especialista em cotações de seguros.</p>
+                    <a href="https://wa.me/4896200261" target="_blank" class="btn-hover inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg text-center transition-all duration-200 shadow-sm w-full sm:w-auto">
+                        Falar com Pedro
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-10 pt-6 border-t border-gray-200">
+                <button onclick="showPage1()" class="text-gray-500 hover:text-gray-700 font-medium transition-colors duration-200">
+                    ← Voltar para a página inicial
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage2() {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+        
+        function showPage1() {
+            document.getElementById('page2').classList.add('hidden');
+            document.getElementById('page1').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
